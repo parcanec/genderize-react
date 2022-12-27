@@ -1,8 +1,13 @@
 import React from 'react';
 
+function sendName(env){
+    env.preventDefault()
+    console.log("Передаем имя:)")
+}
+
 const TextInput = () => {
     return (
-        <input id='enteredName' placeholder="Имя" type="text"/>
+        <input onChange={sendName} placeholder="Имя"/>
     );
 };
 

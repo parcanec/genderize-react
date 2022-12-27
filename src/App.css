@@ -8,7 +8,7 @@ body {
   background-color: rgb(205, 205, 205);
 }
 
-form {
+.App {
   border:0px solid #2160ad80;
   padding:20px;
   border-radius:10px;
