@@ -1,14 +1,14 @@
-import React from 'react';
+import React from 'react'
 
-function sendName(env){
-    env.preventDefault()
-    console.log("Передаем имя:)")
-}
-
-const TextInput = () => {
+const TextInput = (props) => {
+    function onChangeHandler(env){
+        env.preventDefault()
+        props.setName(env.target.value)
+    }
+    
     return (
-        <input onChange={sendName} placeholder="Имя"/>
-    );
-};
+        <input onChange={onChangeHandler} placeholder={props.text}/>
+    )
+}
 
 export default TextInput;

@@ -1,14 +1,9 @@
-import React from 'react';
+import React from 'react'
 
-function sayHi(env){
-    env.preventDefault()
-    console.log("Привет, я нажалась:)")
-}
-
-const Button = () => {
+const Button = (props) => {
     return (
-        <button onClick={sayHi} id="checkGender">Проверить</button>
-    );
-};
+        <button onClick={props.onClick}>{props.text}</button>
+    )
+}
 
 export default Button;
