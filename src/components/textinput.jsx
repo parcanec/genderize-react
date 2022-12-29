@@ -7,8 +7,8 @@ const TextInput = (props) => {
     }
     
     return (
-        <input onChange={onChangeHandler} placeholder={props.text}/>
+        <input onChange={onChangeHandler} placeholder={props.text} value={props.value}/>
     )
 }
 
-export default TextInput;
+export default TextInput
