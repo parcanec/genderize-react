@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import './App.css'
 import Button from './components/button.jsx'
 import TextInput from './components/textinput.jsx'
@@ -24,9 +24,9 @@ function App() {
     } else {
       setResult('Ошибка')
     }
-    setName('')
-  }
 
+  }
+  useEffect(()=>{setResult('')},[name])
   return (
     <form className="App">
         <h1>Введите имя для проверки пола</h1>
